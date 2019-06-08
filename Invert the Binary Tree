@@ -1,0 +1,11 @@
+TreeNode* Solution::invertTree(TreeNode* A) {
+    if(A==NULL)
+        return A;
+    if(A->left==NULL && A->right==NULL)
+        return A;
+   
+    TreeNode* temp=A->right;
+    A->right=A->left;
+    A->left=temp;
+    
+}
